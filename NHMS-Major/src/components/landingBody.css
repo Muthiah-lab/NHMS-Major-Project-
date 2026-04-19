@@ -1,0 +1,108 @@
+.body{
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.topBody h1 {
+    color: #0b3d91;
+    font-weight: bolder;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    line-height: 1.05;
+    max-width: 100%;
+    word-break: keep-all;
+    margin: 0;
+}
+
+.topBody {
+    margin: 80px 0 0;
+    width: 100%;
+    padding: 0 20px;
+    margin-left: 30px;
+}
+
+.breakTag {
+    background-color: rgb(217, 217, 217);
+    height: 5px;
+    width: 100%;
+    border-radius: 1px;
+    border-color: #d9e0e6;
+    border-style: solid
+}
+
+.topBody p {
+    padding-top: 7px;
+    max-width: 700px;
+}
+
+.topBody button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: rgb(7, 7, 157);
+}
+
+.section2 {
+    margin-top: 70px;
+    margin-right: 50px;
+    margin-left: 50px;
+    max-width: 1400px;
+    margin-bottom: 70px;
+}
+
+.section2 h2 {
+    color: #0b3d91;
+    font-weight: bolder;
+    font-size: 1.45rem;
+    margin-bottom: 25px;
+}
+
+.featuresOverallDiv{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+.featureDiv h3{
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 20px;
+    color: #0b3d91;
+}
+.featureDiv{
+    border-radius: 12px;
+    border: 1px solid #d9e0e6;
+    padding: 30px;
+    background: #fff;
+}
+
+@media (max-width: 800px) {
+    .section2 {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 620px) {
+    .topBody {
+        margin-top: 60px;
+        padding: 0 14px;
+    }
+
+    .topBody p,
+    .section2 p {
+        max-width: 100%;
+    }
+
+    .featuresOverallDiv {
+        grid-template-columns: 1fr;
+    }
+}

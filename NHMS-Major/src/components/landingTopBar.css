@@ -1,0 +1,39 @@
+.headerDiv{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+.header{
+    display: flex;
+    color: rgb(7, 7, 157);
+    font-weight: bolder;
+    font-size: x-large;
+    text-align: center;
+    
+}
+.headerHref{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-decoration: none;
+    color: black;
+
+}
+.headerHref a{
+    text-decoration: none;
+    color: black;
+
+}
+.hrline{
+    border-color: red;
+    border-width: 3px;
+}
