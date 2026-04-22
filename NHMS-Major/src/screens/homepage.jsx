@@ -1,9 +1,13 @@
 import React from 'react'
+import HomeTopBar from '../components/homePage-Outpatient/topBar'
 
 function Homepage() {
   return (
-    <div>Homepage</div>
+    <>
+    <HomeTopBar />
+    </>
   )
 }
+
 
 export default Homepage

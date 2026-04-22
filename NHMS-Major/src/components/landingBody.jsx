@@ -13,7 +13,7 @@ function LandingBody() {
                     <h1>National Health Management System (NHMS)</h1>
 
                     <p>An integrated smart hospital system connecting patients, healthcare professionals, and support personnel within a unified national platform.</p>
-                    <button onClick={loginRedirect}><strong>Login To My Portal</strong></button>
+                    <button onClick={loginRedirect}><strong style={{color:'white'}}>Login To My Portal</strong></button>
                 </div>
             </section>
             <div className='breakTag'></div>
