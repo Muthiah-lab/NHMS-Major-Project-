@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: var(--bg);
+}
+.sidebaroverall{
+    width: 300px;
+}
+.sidepanelcontent:hover {
+    background-color: #e0eafb;
+}
+
+.sidepanelcontent:hover .textstyle {
+    color: #0b3d91;
+}
+
+.sidepanelcontent {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.textstyle {
+    color: black;
+    text-decoration: none;
+    margin-left: 30px;
+}
