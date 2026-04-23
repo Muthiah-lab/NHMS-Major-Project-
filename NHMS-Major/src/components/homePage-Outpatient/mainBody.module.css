@@ -1,0 +1,45 @@
+.mainbody{
+    background-color: rgb(230, 237, 243); 
+    width: 100%;
+}
+.personaldetails{
+    background-color: #fff;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 15px;
+}
+.personaldetails h2{
+    color: black;
+}
+.personaldetails h3{
+    margin: 10px;
+    color: black;
+    font-weight: 100;
+}
+.profilepic{
+    border-width: 2px;
+    border-style: solid ;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+
+}
+.detailsContainer{
+    justify-content: space-between;
+}
+
+.quickassist{
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 15px;
+}
+.quickassist h2{
+    color: black;
+    margin: 10px;
+
+}
