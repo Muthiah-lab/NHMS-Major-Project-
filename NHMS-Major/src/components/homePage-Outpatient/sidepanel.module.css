@@ -6,6 +6,7 @@ body {
 .sidebaroverall{
     width: 300px;
     display: flex;
+    overflow-y: fixed;
 }
 .sidepanelcontent:hover {
     background-color: #e0eafb;

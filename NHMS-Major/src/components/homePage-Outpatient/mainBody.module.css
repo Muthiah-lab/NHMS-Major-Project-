@@ -1,6 +1,17 @@
+body{
+    overflow-y: hidden;
+}
 .mainbody{
     background-color: rgb(230, 237, 243); 
     width: 100%;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding-bottom: 30px;
+}
+
+.mainbody::-webkit-scrollbar {
+    display: none;
 }
 .personaldetails{
     background-color: #fff;
@@ -30,16 +41,78 @@
     justify-content: space-between;
 }
 
-.quickassist{
-    background-color: #fff;
-    border-radius: 20px;
-    margin-top: 30px;
-    margin-right: 30px;
-    margin-left: 30px;
-    padding: 15px;
+.quickassist {
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin: 30px;
+  padding: 24px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
-.quickassist h2{
-    color: black;
-    margin: 10px;
 
+.quickassist h2 {
+  margin: 0 0 12px 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.quickassist hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+/* Container for buttons */
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+}
+
+/* Base button style */
+.buttonContainer button {
+  flex: 1;
+  border-radius: 14px;
+  padding: 18px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+/* Title inside button */
+.buttonContainer button {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Subtitle inside button */
+.buttonContainer span {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Immediate consultation (Primary) */
+.consultNow {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.consultNow:hover {
+  background-color: #1d4ed8;
+}
+
+/* Schedule appointment (Secondary) */
+.schedule {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.schedule:hover {
+  background-color: #e0eafb;
 }

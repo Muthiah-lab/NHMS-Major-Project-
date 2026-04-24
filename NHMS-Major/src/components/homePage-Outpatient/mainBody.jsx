@@ -31,11 +31,11 @@ function MainBody() {
         setDOB(finaldate)
     }
     return (
-        <div className={styles.mainbody}>
+        <div className={styles.mainbody} >
             <div className={styles.personaldetails}>
                 <h2>Personal Information</h2>
-                <hr />
-                <div style={{display:'flex'}} className={styles.detailsContainer}>
+                <hr style={{borderColor:'black'}}/>
+                <div style={{ display: 'flex' }} className={styles.detailsContainer}>
                     <div>
                         <h3>Name : {username}</h3>
                         <h3>Age : {age}</h3>
@@ -44,10 +44,29 @@ function MainBody() {
                     <div className={styles.profilepic}></div>
                 </div>
             </div>
-            <div className={styles.quickassist}>
-                <h2>Quick Assist Panel</h2>
-                <hr />
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div className={styles.quickassist}>
+                    <h2>Consult a Doctor</h2>
+                    <hr style={{borderColor:'black'}}/>
+
+                    <div className={styles.buttonContainer}>
+                        <button className={styles.consultNow}>
+                            Consult Now
+                            <span>Immediate Consultation</span>
+                        </button>
+
+                        <button className={styles.schedule}>
+                            Schedule Appointment
+                            <span>Book for later</span>
+                        </button>
+                    </div>
+                </div>
+                <div className={styles.quickassist}>
+                    <h2>Upcoming Appointments</h2>
+                    <hr style={{borderColor:'black'}}/>
+                </div>
             </div>
+
         </div>
     )
 }
