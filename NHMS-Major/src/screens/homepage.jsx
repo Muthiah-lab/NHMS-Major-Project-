@@ -1,7 +1,6 @@
 import React from 'react'
 import HomeTopBar from '../components/homePage-Outpatient/topBar'
 import { useNavigate } from 'react-router'
-import Sidepanel from '../components/homePage-Outpatient/sidepanel'
 import MainBody from '../components/homePage-Outpatient/mainBody'
 
 function Homepage() {
@@ -13,10 +12,7 @@ function Homepage() {
   return (
     <>
       <HomeTopBar />
-      <div style={{display: 'flex'}}>
-        <Sidepanel />
-        <MainBody />
-      </div>
+      <MainBody />
     </>
   )
 }

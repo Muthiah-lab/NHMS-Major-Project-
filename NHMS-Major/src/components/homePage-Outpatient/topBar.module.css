@@ -6,20 +6,51 @@
     display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 30px;
+    margin-left: 15px;
     margin-right: 30px;
 
 }
-
-.header {
+.topNav{
     display: flex;
-    color: #0b3d91;
-    font-weight: bolder;
-    font-size: x-large;
-    text-align: center;
-
+    justify-content: space-between;
+}
+.sidepanelcontent:hover {
+    background-color: #e0eafb;
 }
 
+.sidepanelcontent:hover .textstyle {
+    color: #0b3d91;
+}
+
+.sidepanelcontent {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textstyle {
+    color: black;
+    text-decoration: none;
+    font-size: small;
+}
+.header {
+    color: #0b3d91;
+    font-size: small;
+}
+.header p{
+    font-weight: bold;
+    font-size: x-large;
+}
+.divtagstyle{
+    display:"flex";
+    align-items:"center";
+    gap:'10px';
+    font-weight:'bold';
+}
 .headerHref {
     display: flex;
     flex-direction: row;
@@ -38,10 +69,37 @@
 }
 
 .hrline {
-    border-color: red;
     border-width: 3px;
 }
 
 .menubar{
     color: black;
+}
+.sidepanelcontentLogout {
+  display: flex;
+  align-items: center;
+}
+
+/* Logout text styled like a button */
+.textstyleLogout {
+  border: 1px solid #f87171;
+  color: #ef4444;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.textstyleLogout:hover {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+}
+
+/* Click (active) effect */
+.textstyleLogout:active {
+  transform: scale(0.97);
 }

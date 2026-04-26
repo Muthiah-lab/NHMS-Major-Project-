@@ -1,45 +1,103 @@
-body{
-    overflow-y: hidden;
+.consultNowBig {
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 18px;
+  width: 220px;
+  height: 100%;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: background 0.2s;
 }
-.mainbody{
-    background-color: rgb(230, 237, 243); 
-    width: 100%;
-    height: calc(100vh - 80px);
-    overflow-y: auto;
-    scrollbar-width: none;
-    padding-bottom: 30px;
+
+.consultNowBig:hover {
+  background-color: #1d4ed8;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.mainbody {
+  background-color: rgb(230, 237, 243);
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding-bottom: 30px;
 }
 
 .mainbody::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-.personaldetails{
-    background-color: #fff;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 30px;
-    border-radius: 20px;
-    padding: 15px;
-}
-.personaldetails h2{
-    color: black;
-}
-.personaldetails h3{
-    margin: 10px;
-    color: black;
-    font-weight: 100;
-}
-.profilepic{
-    border-width: 2px;
-    border-style: solid ;
-    border-radius: 100%;
-    width: 120px;
-    height: 120px;
 
+.welcometag {
+  background-color: aliceblue;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 15px;
 }
-.detailsContainer{
-    justify-content: space-between;
+
+.welcometag h3 {
+  margin: 10px;
+  color: black;
 }
+
+.welcometag p {
+  margin: 10px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.consultNowSmall {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.consultNowSmall:hover {
+  background: #1d4ed8;
+}
+
+.consultNowSmall:active {
+  transform: scale(0.97);
+}
+
+.personaldetails {
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-left: 30px;
+  padding: 24px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.profilepic {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 100%;
+  width: 240px;
+  height: 240px;
+}
+
 
 .quickassist {
   background-color: #ffffff;
