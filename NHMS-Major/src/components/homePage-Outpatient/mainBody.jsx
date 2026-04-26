@@ -11,6 +11,7 @@ function MainBody() {
     const [patientData, setPatientData] = useState([])
     const [doctorData, setDoctorData] = useState([])
     const [dob, setDOB] = useState('')
+    const [admittedDate, setAdmittedDate]=useState('')
 
 
     useEffect(() => {
@@ -26,6 +27,7 @@ function MainBody() {
                 setPatientData(data?.results[0])
                 setDoctorData(data?.assignedDoctor[0])
                 funcdob(data?.results[0].dateOfBirth)
+                funcAdmitted(data?.results[0].admittedDate)
             })
     }, [])
     function funcdob(dateString) {
@@ -36,13 +38,34 @@ function MainBody() {
         const finaldate = day + ' - ' + month + ' - ' + year
         setDOB(finaldate)
     }
+    function funcAdmitted(dateString) {
+        const date = new Date(dateString);
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        const finaldate = day + ' - ' + month + ' - ' + year
+        setAdmittedDate(finaldate)
+    }
+    async function startCamera() {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      const video = document.getElementById('video');
+      video.srcObject = stream;
+    } catch (err) {
+      console.error("Error accessing camera:", err);
+      alert("Camera access denied or not available.");
+    }
+  }
+
+  startCamera();
+
     return (
         <div className={styles.mainbody} >
             <div className={styles.welcometag}>
                 <h3>Hello, {patientData.full_name}!</h3>
                 <p>Wish you a speedy recovery.</p>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginRight: '30px',marginTop:'20px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginRight: '30px', marginTop: '20px' }}>
                 <div className={styles.personaldetails}>
                     <h2>Patient Information</h2>
                     <hr style={{ borderColor: 'black' }} />
@@ -78,7 +101,7 @@ function MainBody() {
                         <button className={styles.consultNowSmall}>
                             Consult Now
                         </button>
-                        
+
                     </div>
                     <hr style={{ borderColor: 'black' }} />
                     <div style={{ display: 'flex', gap: '40px' }}>
@@ -108,7 +131,19 @@ function MainBody() {
                     </div>
                 </div>
             </div>
-
+            <div className={styles.livephotofeed}>
+                <div style={{display:'flex',gap:'20px'}}>
+                    <video id="video" width="50%" autoPlay playsInline></video>
+                    <div style={{width:'100%'}}>
+                        <div>
+                            <h2>Admission Details</h2>
+                            <hr />
+                            <p>Admitted On : {admittedDate}</p>
+                            <p>Diagnosis : {patientData.diagnosis}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
