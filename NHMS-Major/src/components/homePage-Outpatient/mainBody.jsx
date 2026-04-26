@@ -10,6 +10,7 @@ function MainBody() {
     const token = localStorage.getItem('token')
     const [patientData, setPatientData] = useState([])
     const [doctorData, setDoctorData] = useState([])
+    const [dob, setDOB] = useState('')
 
 
     useEffect(() => {
@@ -24,6 +25,7 @@ function MainBody() {
             .then(data => {
                 setPatientData(data?.results[0])
                 setDoctorData(data?.assignedDoctor[0])
+                funcdob(data?.results[0].dateOfBirth)
             })
     }, [])
     function funcdob(dateString) {
@@ -53,16 +55,13 @@ function MainBody() {
                             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                                 <tbody>
                                     {[
-                                        { icon: '🆔', label: 'IC Number', value: patientData.patientIC_Number },
-                                        { icon: '👤', label: 'Full Name', value: patientData.full_name},
-                                        { icon: '👥', label: 'Age', value: patientData.age },
-                                        { icon: '📅', label: 'Date of Birth', value: patientData.dateOfBirth },
-                                        { icon: '📞', label: 'Contact Number', value: patientData.phoneNumber },
-                                        { icon: '💧', label: 'Gender', value: patientData.gender },
-                                        { icon: '🩸', label: 'Blood Type', value: patientData.bloodGroup },
+                                        { label: 'NRIC Number', value: patientData.patientIC_Number },
+                                        { label: 'Age', value: patientData.age },
+                                        { label: 'Date of Birth', value: dob },
+                                        { label: 'Gender', value: patientData.gender },
+                                        { label: 'Blood Type', value: patientData.bloodGroup },
                                     ].map((row, index) => (
                                         <tr key={index} style={{ borderBottom: '1px solid #f1f5f9' }}>
-                                            <td style={{ padding: '5px', width: '40px', color: '#94a3b8' }}>{row.icon}</td>
                                             <td style={{ padding: '5px 0', color: '#64748b', width: '180px' }}>{row.label}</td>
                                             <td style={{ padding: '5px 0', color: '#1e293b', fontWeight: '500' }}>{row.value}</td>
                                         </tr>
@@ -91,16 +90,13 @@ function MainBody() {
                             <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                                 <tbody>
                                     {[
-                                        { icon: '👤', label: 'Full Name', value: doctorData.doctor_name },
-                                        { icon: '🆔', label: 'License Number', value: doctorData.medicalLicenseNumber },
-                                        { icon: '👨‍⚕️', label: 'Specialization', value: doctorData.specialization_name },
-                                        { icon: '⏳', label: 'Experience', value: `${doctorData.yearsOfExperience} Years` },
-                                        { icon: '📞', label: 'Contact Number', value: doctorData.contantNumber },
-                                        { icon: '📧', label: 'Email', value: doctorData.email },
-                                        { icon: '⏰', label: 'Working Hours', value: `${doctorData.startTime} - ${doctorData.endTime}` },
+                                        { label: 'Full Name', value: doctorData.doctor_name },
+                                        { label: 'Specialization', value: doctorData.specialization_name },
+                                        { label: 'Experience', value: `${doctorData.yearsOfExperience} Years` },
+                                        { label: 'Contact Number', value: doctorData.contantNumber },
+                                        { label: 'Working Hours', value: `${doctorData.startTime} - ${doctorData.endTime}` },
                                     ].map((row, index) => (
                                         <tr key={index} style={{ borderBottom: '1px solid #f1f5f9' }}>
-                                            <td style={{ padding: '5px 0', width: '40px', color: '#94a3b8' }}>{row.icon}</td>
                                             <td style={{ padding: '5px 0', color: '#64748b', width: '180px' }}>{row.label}</td>
                                             <td style={{ padding: '5px 0', color: '#1e293b', fontWeight: '500' }}>{row.value}</td>
                                         </tr>

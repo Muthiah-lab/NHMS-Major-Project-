@@ -1,12 +1,20 @@
 import React from 'react'
 import './landingTopBar.css'
+import { HeartPlusIcon } from 'lucide-react'
+
 
 function LandingTopBar() {
     return (
         <div>
             <div className='headerDiv'>
-                <div className='header'>
-                    NHMS
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <div>
+                        <HeartPlusIcon size={50} color="#0b913a" />
+                    </div>
+                    <div className='header'>
+                        <p>NHMS</p>
+                        National Health Management System
+                    </div>
                 </div>
                 <div className='menubar'>
                     <span className='headerHref'>

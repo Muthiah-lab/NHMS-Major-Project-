@@ -1,22 +1,22 @@
-.headerDiv{
+.headerDiv {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     display: flex;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
     margin-right: 30px;
-    
+
 }
-.header{
-    display: flex;
+.header {
     color: #0b3d91;
-    font-weight: bolder;
+    font-size: small;
+}
+.header p{
+    font-weight: bold;
     font-size: x-large;
-    text-align: center;
-    
 }
 .headerHref{
     display: flex;
@@ -34,6 +34,6 @@
 
 }
 .hrline{
-    border-color: red;
+    border-color: green;
     border-width: 3px;
 }

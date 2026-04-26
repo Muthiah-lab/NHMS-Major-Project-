@@ -8,6 +8,8 @@
     border-color: rgb(173, 173, 173);
     border-style: solid;
     margin-top: 70px;
+    overflow-y: auto;
+    min-height: 100vh;
 }
 
 .header {

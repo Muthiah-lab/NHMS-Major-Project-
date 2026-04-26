@@ -52,7 +52,6 @@ function HomeTopBar() {
                     <div className={styles.header}>
                         <p>NHMS</p>
                         National Health Management System
-
                     </div>
                 </div>
                 <div style={{display:'flex',justifyContent:'space-between',width:'65%'}}>
